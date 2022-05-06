@@ -1,0 +1,109 @@
+*******************************************************************************************
+*                                                                                     
+*  Verwendung des Visual Studio Code-Editors mit der ARM-basierten PEAK-System GCC-Umgebung
+*  © 2020 PEAK-System Technik GmbH, Darmstadt, Deutschland
+*                                                                                     
+*******************************************************************************************
+
+Inhalt
+********
+  * Einleitung
+  * Systemanforderungen
+  * Inhalt des Pakets
+  * Firmware-Entwicklung
+  * Kontaktaufnahme mit PEAK-System
+
+
+Einleitung
+**********
+Mit Hilfe dieses Entwicklungspaketes können Sie eine eigene anwendungsspezifische 
+Firmware für programmierbare Hardware-Produkte von PEAK-System erstellen.
+
+
+Systemanforderungen
+*******************
+- Ein Entwicklungs-PC mit Windows® 10 (32-/64-Bit)
+- Ein CAN-Interface der PCAN-Reihe zum Hochladen der Firmware auf Ihre Hardware über CAN
+
+
+Inhalt des Pakets
+*****************
+Build Tools Win32\
+	Werkzeuge zur Automatisierung des Build-Prozesses für Windows® 32-Bit
+
+Build Tools Win64\
+	Werkzeuge zur Automatisierung des Build-Prozesses für Windows® 64-Bit
+
+Compiler\
+    Compiler für die unterstützten programmierbaren Produkte
+
+Hardware\
+    Enthält Unterverzeichnisse der unterstützten Hardware, die mehrere Firmware-
+	Beispiele enthalten. Nutzen Sie die Beispiele, um Ihre eigene Firmware-Entwicklung 
+	zu beginnen.
+
+PEAK-Flash\
+    Windows-Tool zum Hochladen der Firmware auf Ihre Hardware über CAN. Kopieren Sie 
+	das Verzeichnis auf Ihren PC und starten Sie die Software ohne weitere Installation.
+
+LiesMich.txt
+    Diese Text-Datei in Deutsch.
+	
+ReadMe.txt
+    Diese Text-Datei in Englisch.
+
+SetPath_for_VSCode.vbs
+	VBScript, um die Beispielverzeichnisse für die Visual Studio Code IDE zu modifizieren.
+
+	
+Firmware-Entwicklung
+********************
+1. 	Erstellen Sie einen Ordner auf Ihrem lokalen PC. Wir empfehlen die Verwendung 
+    eines lokalen Laufwerks.
+
+2. 	Kopieren Sie die vollständig entpackten "PEAK-DevPack"-Verzeichnisse in Ihren 
+    Ordner, inklusive aller Unterverzeichnisse.	Es ist keinerlei Installation 
+	erforderlich.
+	
+3.	Führen Sie das Skript "SetPath_for_VSCode.vbs" aus. Dieses Skript wird die 
+    Beispielverzeichnisse für die Visual Studio Code IDE modifizieren 
+	(https://code.visualstudio.com/). 
+	
+	Anschließend hat jedes Beispielverzeichnis einen Ordner namens ".vscode" mit den 
+	benötigten Dateien mit den lokalen Pfadangaben.
+	
+4.	Jetzt können Sie Visual Studio Code starten, das kostenlos bei Microsoft erhältlich ist.
+
+5.	Wählen Sie den Ordner Ihres Projekts und öffnen Sie ihn. Zum Beispiel: 
+    "d:\PEAK-DevPack\Hardware\PCAN-Router Pro FD\Beispiele\01_Routing"
+
+6.	Sie können den C-Code bearbeiten und über das Menü Terminal > Run Task make clean 
+    und make all aufrufen oder eine einzelne Datei kompilieren.
+
+7.	Erstellen Sie Ihre Firmware mit Make All. Die Firmware ist das *.bin im 
+    Unterverzeichnis "out" Ihres Projektordners.
+
+8.	Richten Sie Ihre Hardware für den Firmware-Upload wie im Produkt-Handbuch beschrieben ein.
+
+9.	Verwenden Sie das Tool PEAK-Flash, um Ihre Firmware über CAN auf das Gerät hochzuladen 
+    (ein PEAK-CAN-Interface ist erforderlich).
+
+10.	Öffnen Sie das Tool über Terminal > Run Task > Flash Device oder über das Unterverzeichnis 
+    des Entwicklungspakets.
+
+
+Kontaktaufnahme mit PEAK-System
+********************************
+Haben Sie Fragen zu Ihrer Hardware oder benötigen Sie Informationen über weitere Produkte 
+von PEAK-System? Bitte kontaktieren Sie uns:
+
+PEAK-System Technik GmbH
+Otto-Röhm-Straße 69
+64293 Darmstadt
+Deutschland
+
+Phone: +49 (0)6151 8173-20
+Fax:   +49 (0)6151 8173-29
+
+support@peak-system.com
+www.peak-system.com

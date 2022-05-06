@@ -1,0 +1,36 @@
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Libraries
+*.lib
+# *.a
+
+# Shared objects (inc. Windows DLLs)
+# *.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+# *.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+
+/workspace_For_PCAN_Router_FD/.vscode
+/workspace_For_PCAN_Router_FD/lst
+/workspace_For_PCAN_Router_FD/obj
+/workspace_For_PCAN_Router_FD/dep
+
+
+/workspace_For_PCAN_Router_Pro_FD/.vscode
+/workspace_For_PCAN_Router_Pro_FD/lst
+/workspace_For_PCAN_Router_Pro_FD/obj
+/workspace_For_PCAN_Router_Pro_FD/dep
+.vscode
